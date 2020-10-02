@@ -1,10 +1,10 @@
 <?php
 
-define('BASE_URL', '/comem-archidep-php-todo-exercise/');
+define('BASE_URL', '/');
 define('DB_USER', 'todolist');
 define('DB_PASS', 'ArchiDep2020.');
 define('DB_NAME', 'todolist');
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', 'mysql');
 define('DB_PORT', '3306');
 
 $db = new PDO('mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_NAME, DB_USER, DB_PASS);
@@ -37,7 +37,10 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $updateQuery = ''; // IMPLEMENT ME
+        $updateQuery = '';
+
+        $updateQuery =  'UPDATE todo SET done = !done WHERE id = '.$id;
+
         if(!$db->query($updateQuery)) {
           die(print_r($db->errorInfo(), true));
         }
