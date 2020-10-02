@@ -1,8 +1,8 @@
 <?php
 
-define('BASE_URL', '/');
+define('BASE_URL', '/comem-archidep-php-todo-exercise/');
 define('DB_USER', 'todolist');
-define('DB_PASS', 'chAngeMeN0w!');
+define('DB_PASS', 'ArchiDep2020.');
 define('DB_NAME', 'todolist');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
@@ -70,7 +70,7 @@ if (isset($_POST['action'])) {
 /**
  * Select all tasks from the database.
  */
-$selectQuery = ''; // IMPLEMENT ME
+$selectQuery = 'SELECT * FROM todo'; // IMPLEMENT ME
 $items = $db->query($selectQuery);
 ?>
 
