@@ -1,0 +1,18 @@
+# Env
+.env
+
+# Node
+npm-debug.log
+
+# Mac OS
+.DS_STORE
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+
+# Docker
+.docker/
+docker-compose.yml
