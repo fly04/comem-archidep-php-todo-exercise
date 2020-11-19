@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', getenv('TODOLIST_DB_PASS') ?: '/');
+define('BASE_URL', getenv('TODOLIST_BASE_URL') ?: '/');
 define('DB_USER', getenv('TODOLIST_DB_USER') ?: 'todolist');
 define('DB_PASS', getenv('TODOLIST_DB_PASS'));
 define('DB_NAME', getenv('TODOLIST_DB_NAME') ?: 'todolist');
